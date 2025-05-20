@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accueil - Jeu de Questions</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0077b6, #00b4d8);
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: #48cae4;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #1eaedb;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue au Jeu de Questions</h1>
+  <button id="start-btn">Démarrer le quiz</button>
+
+  <script>
+    document.getElementById('start-btn').addEventListener('click', () => {
+      sessionStorage.clear(); // RAZ des questions vues, thèmes etc
+      window.location.href = "themes.html";
+    });
+  </script>
+</body>
+</html>
