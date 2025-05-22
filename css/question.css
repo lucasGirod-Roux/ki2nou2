@@ -1,0 +1,85 @@
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: white;
+     text-align: center;
+     padding: 30px 20px;
+     min-height: 100vh;
+     /* BG dynamique selon thème */
+ }
+
+ /* Couleurs des fonds par thème */
+ body.au_quotidien {
+     background: linear-gradient(to right, #b33a17, #d94e21);
+ }
+
+ body.loisir {
+     background: linear-gradient(to right, #5a4b8b, #7c6ac9);
+ }
+
+ body.four_tout {
+     background: linear-gradient(to right, #7ea94d, #a3c15b);
+ }
+
+ body.personnalite {
+     background: linear-gradient(to right, #b59455, #d7b36a);
+ }
+
+ #question-title {
+     font-size: 28px;
+     margin-bottom: 30px;
+     font-weight: 700;
+     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+ }
+
+ #question-list {
+     max-width: 600px;
+     margin: 0 auto 40px auto;
+     background: rgba(255, 255, 255, 0.15);
+     padding: 25px 20px;
+     border-radius: 15px;
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+     font-size: 20px;
+     text-align: left;
+     line-height: 1.4;
+ }
+
+ button {
+     padding: 12px 25px;
+     font-size: 18px;
+     border-radius: 12px;
+     border: none;
+     cursor: pointer;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+     color: white;
+     transition: background-color 0.3s, transform 0.2s ease-in-out;
+     margin: 10px 10px 0 10px;
+ }
+
+ #next-question {
+     background-color: #0366d6;
+ }
+
+ #next-question:hover {
+     background-color: #034a9a;
+     transform: scale(1.05);
+ }
+
+ #new-question {
+     background-color: #f28b30;
+ }
+
+ #new-question:hover {
+     background-color: #d27121;
+     transform: scale(1.05);
+ }
+
+ #back-theme {
+     background-color: #48cae4;
+     color: #04293a;
+ }
+
+ #back-theme:hover {
+     background-color: #1eaedb;
+     color: white;
+     transform: scale(1.05);
+ }

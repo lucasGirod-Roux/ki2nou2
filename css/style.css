@@ -1,92 +1,22 @@
-/* style.css */
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to right, #0077b6, #00b4d8);
-  color: #fff;
-  text-align: center;
-}
-
-h1, h2 {
-  margin-top: 20px;
-}
-
-.container {
-  padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    color: white;
+    text-align: center;
+    padding-top: 100px;
 }
 
 button {
-  padding: 15px 25px;
-  font-size: 16px;
-  margin: 10px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease-in-out;
-  background-color: #48cae4;
-  color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #48cae4;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
 }
 
 button:hover {
-  transform: scale(1.05);
+    background-color: #1eaedb;
 }
-
-.theme-button {
-  width: 200px;
-  height: 150px;
-  display: inline-block;
-  margin: 20px;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 20px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  transition: all 0.3s ease-in-out;
-}
-
-.theme-au_quotidien {
-  background-color: #62b6cb;
-}
-
-.theme-loisir {
-  background-color: #9d4edd;
-}
-
-.theme-four_tout {
-  background-color: #f77f00;
-}
-
-.theme-personnalite {
-  background-color: #80b918;
-}
-
-.theme-button:hover {
-  transform: scale(1.1);
-}
-
-.question-box {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  margin: 20px auto;
-  width: 80%;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-
-
-   body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-    .hidden { display: none; }
-    button { padding: 10px 20px; margin: 10px; font-size: 16px; cursor: pointer; }
-
-    .theme-au_quotidien { background-color: #d0eaff; }
-    .theme-loisir { background-color: #ffe6cc; }
-    .theme-four_tout { background-color: #e0ffd8; }
-    .theme-personnalite { background-color: #f0e0ff; }
-
-    .btn-au_quotidien { background-color: #a3d3f5; border: none; border-radius: 8px; }
-    .btn-loisir { background-color: #ffd1a4; border: none; border-radius: 8px; }
-    .btn-four_tout { background-color: #baf5a3; border: none; border-radius: 8px; }
-    .btn-personnalite { background-color: #dab3ff; border: none; border-radius: 8px; }

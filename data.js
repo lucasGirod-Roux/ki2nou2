@@ -3,19 +3,19 @@ const questions = {
     {
       titre: "Les tâches ménagères",
       questions: [
-        "Quelle est la première chose à faire pour nettoyer une pièce ?",
-        "Quel produit utilise-t-on pour laver le sol ?",
-        "À quelle fréquence faut-il sortir les poubelles ?"
+        "Qui de vous deux déteste le plus les tâches ménagères ?",
+        "Quelle est la tâche ménagère que le joueur A fait le plus souvent ?",
+        "Citez un produit ménager indispensable pour vous dans une maison."
       ]
     },
     {
-      titre: "Les courses au supermarché",
+      titre: "Les courses",
       questions: [
-        "Quels produits trouve-t-on dans le rayon frais ?",
-        "Comment lire une étiquette nutritionnelle ?",
-        "Quelle est l'utilité d'une liste de courses ?"
+        "Qui de vous deux aimes le plus faire les course ?",
+        "Quel plaisir coupable achète le plus souvent le joueur B lorsqu'il fait les course ?",
+        "Vous avez 10€ et devez faire un repas pour deux : que mettez-vous dans le panier ? (3 articles)"
       ]
-    }
+    },
   ],
   loisir: [
     {

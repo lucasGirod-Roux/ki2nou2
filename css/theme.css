@@ -1,0 +1,68 @@
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0077b6, #00b4d8);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .theme-btn {
+      width: 180px;
+      height: 120px;
+      margin: 15px;
+      border-radius: 15px;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+      color: white;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .theme-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Couleurs par thème */
+    .au_quotidien {
+      background-color: #c1440e;
+    }
+
+    /* rouge brique */
+    .loisir {
+      background-color: #4b3f72;
+    }
+
+    /* violet foncé */
+    .four_tout {
+      background-color: #6a994e;
+    }
+
+    /* vert olive */
+    .personnalite {
+      background-color: #bb9457;
+    }
+
+    /* doré */
+
+    #back-home {
+      margin-top: 50px;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 10px;
+      background-color: #48cae4;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    #back-home:hover {
+      background-color: #1eaedb;
+    }
