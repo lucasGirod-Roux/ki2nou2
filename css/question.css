@@ -43,43 +43,79 @@
      line-height: 1.4;
  }
 
- button {
-     padding: 12px 25px;
-     font-size: 18px;
-     border-radius: 12px;
-     border: none;
-     cursor: pointer;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-     color: white;
-     transition: background-color 0.3s, transform 0.2s ease-in-out;
-     margin: 10px 10px 0 10px;
- }
+button {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    color: white;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    margin: 10px 10px 0 10px;
+}
 
- #next-question {
-     background-color: #0366d6;
- }
+/* Effet brillance */
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    pointer-events: none;
+    transition: none;
+}
 
- #next-question:hover {
-     background-color: #034a9a;
-     transform: scale(1.05);
- }
+button:hover::before {
+    animation: shine 0.8s ease forwards;
+}
 
- #new-question {
-     background-color: #f28b30;
- }
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+    100% {
+        left: 125%;
+    }
+}
 
- #new-question:hover {
-     background-color: #d27121;
-     transform: scale(1.05);
- }
+/* Boutons spécifiques */
 
- #back-theme {
-     background-color: #48cae4;
-     color: #04293a;
- }
+#next-question {
+    background-color: #0366d6;
+}
 
- #back-theme:hover {
-     background-color: #1eaedb;
-     color: white;
-     transform: scale(1.05);
- }
+#next-question:hover {
+    background-color: #034a9a;
+    transform: scale(1.05);
+}
+
+#new-question {
+    background-color: #f28b30;
+}
+
+#new-question:hover {
+    background-color: #d27121;
+    transform: scale(1.05);
+}
+
+#back-theme {
+    background-color: #48cae4;
+    color: #04293a;
+}
+
+#back-theme:hover {
+    background-color: #1eaedb;
+    color: white;
+    transform: scale(1.05);
+}

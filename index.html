@@ -2,16 +2,22 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Accueil - Jeu de Questions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu de Questions</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-  <h1>Bienvenue au Jeu de Questions</h1>
-  <button id="start-btn">Démarrer le quiz</button>
+<body class="home-page">
+  <main class="hero">
+    <div class="hero-content">
+      <h1>Prêt pour vous affronter à <span>Ki2nou2</span> ?</h1>
+      <p>Testez vos connaissances à travers plusieurs thèmes passionnants 🎯</p>
+      <button id="start-btn" class="btn-start">Démarrer le quiz</button>
+    </div>
+  </main>
 
   <script>
     document.getElementById('start-btn').addEventListener('click', () => {
-      sessionStorage.clear(); // RAZ des questions vues, thèmes etc
+      sessionStorage.clear();
       window.location.href = "themes.html";
     });
   </script>

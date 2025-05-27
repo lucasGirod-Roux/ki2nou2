@@ -1,68 +1,151 @@
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #0077b6, #00b4d8);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
+/* Conteneur général */
+body.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-    h1 {
-      margin-bottom: 40px;
-    }
+/* Titre */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
 
-    .theme-btn {
-      width: 180px;
-      height: 120px;
-      margin: 15px;
-      border-radius: 15px;
-      border: none;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
-      color: white;
-      transition: transform 0.2s ease-in-out;
-    }
+/* Grille responsive des boutons */
+.grid-btn-theme {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+@media screen and (max-width: 768px) {
+      .grid-btn-theme {
+        display: flex;
+        flex-direction: column;
+      }
 
-    .theme-btn:hover {
-      transform: scale(1.05);
+      .theme-btn {
+        width: 100%;
+        font-size: 16px;
+      }
     }
+/* Boutons de thème */
+.theme-btn {
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
 
-    /* Couleurs par thème */
-    .au_quotidien {
-      background-color: #c1440e;
-    }
+/* Effet de brillance */
+.theme-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0.2) 100%);
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
 
-    /* rouge brique */
-    .loisir {
-      background-color: #4b3f72;
-    }
+.theme-btn:hover::before {
+  animation: shine 0.8s ease-out;
+}
 
-    /* violet foncé */
-    .four_tout {
-      background-color: #6a994e;
-    }
+.theme-btn:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
 
-    /* vert olive */
-    .personnalite {
-      background-color: #bb9457;
-    }
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
 
-    /* doré */
+  100% {
+    left: 125%;
+  }
+}
 
-    #back-home {
-      margin-top: 50px;
-      padding: 12px 25px;
-      font-size: 16px;
-      border-radius: 10px;
-      background-color: #48cae4;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-      color: white;
-      transition: background-color 0.3s;
-    }
+/* Couleurs spécifiques aux thèmes */
+.au_quotidien {
+  background-color: #c1440e;
+  /* Rouge brique */
+}
 
-    #back-home:hover {
-      background-color: #1eaedb;
-    }
+.loisir {
+  background-color: #4b3f72;
+  /* Violet foncé */
+}
+
+.four_tout {
+  background-color: #6a994e;
+  /* Vert olive */
+}
+
+.personnalite {
+  background-color: #bb9457;
+  /* Doré mat */
+}
+
+/* Bouton retour */
+#back-home {
+  margin-top: 2rem;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #48cae4;
+  border: none;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#back-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0.2) 100%);
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+#back-home:hover::before {
+  animation: shine 0.8s ease-out;
+}
+
+#back-home:hover {
+  background-color: #1eaedb;
+  filter: brightness(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
