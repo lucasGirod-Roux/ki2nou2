@@ -1,5 +1,5 @@
 /* Conteneur général */
-body.container {
+body .container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #0077b6, #00b4d8);
   color: white;
@@ -26,16 +26,21 @@ h1 {
   max-width: 800px;
 }
 @media screen and (max-width: 768px) {
-      .grid-btn-theme {
-        display: flex;
-        flex-direction: column;
-      }
+  .grid-btn-theme {
+    display: flex;
+    flex-direction: column;
+  }
 
-      .theme-btn {
-        width: 100%;
-        font-size: 16px;
-      }
-    }
+  .theme-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+  h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+}
+
 /* Boutons de thème */
 .theme-btn {
   padding: 20px;

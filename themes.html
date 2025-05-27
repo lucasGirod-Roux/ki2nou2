@@ -3,21 +3,23 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Choix du Thème</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/theme.css">
 </head>
 
-<body class="container">
-  <h1>Choisissez un thème</h1>
-  <div class="grid-btn-theme">
-    <button class="theme-btn au_quotidien" data-theme="au_quotidien">Au Quotidien</button>
-    <button class="theme-btn loisir" data-theme="loisir">Loisir</button>
-    <button class="theme-btn four_tout" data-theme="four_tout">Four Tout</button>
-    <button class="theme-btn personnalite" data-theme="personnalite">Personnalité</button>
+<body>
+  <div class="container">
+    <h1>Choisissez un thème</h1>
+    <div class="grid-btn-theme">
+      <button class="theme-btn au_quotidien" data-theme="au_quotidien">Au Quotidien</button>
+      <button class="theme-btn loisir" data-theme="loisir">Loisir</button>
+      <button class="theme-btn four_tout" data-theme="four_tout">Four Tout</button>
+      <button class="theme-btn personnalite" data-theme="personnalite">Personnalité</button>
+    </div>
+    <button id="back-home">Retour à l'accueil</button>
   </div>
-  <br />
-  <button id="back-home">Retour à l'accueil</button>
 
   <script>
     const themeButtons = document.querySelectorAll('.theme-btn');
