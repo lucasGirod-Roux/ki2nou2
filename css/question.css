@@ -46,79 +46,103 @@
      gap: 1rem;
  }
 
-button {
-    position: relative;
-    overflow: hidden;
-    padding: 12px 25px;
-    font-size: 18px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    color: white;
-    transition: background-color 0.3s, transform 0.2s ease-in-out;
-    margin: 10px 10px 0 10px;
-}
+ button {
+     position: relative;
+     overflow: hidden;
+     padding: 12px 25px;
+     font-size: 18px;
+     border-radius: 12px;
+     border: none;
+     cursor: pointer;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+     color: white;
+     transition: background-color 0.3s, transform 0.2s ease-in-out;
+ }
 
-/* Effet brillance */
-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.4) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    transform: skewX(-20deg);
-    pointer-events: none;
-    transition: none;
-}
+ /* Effet brillance */
+ button::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -75%;
+     width: 50%;
+     height: 100%;
+     background: linear-gradient(120deg,
+             rgba(255, 255, 255, 0) 0%,
+             rgba(255, 255, 255, 0.4) 50%,
+             rgba(255, 255, 255, 0) 100%);
+     transform: skewX(-20deg);
+     pointer-events: none;
+     transition: none;
+ }
 
-button:hover::before {
-    animation: shine 0.8s ease forwards;
-}
+ button:hover::before {
+     animation: shine 0.8s ease forwards;
+ }
 
-@keyframes shine {
-    0% {
-        left: -75%;
-    }
-    100% {
-        left: 125%;
-    }
-}
+ @keyframes shine {
+     0% {
+         left: -75%;
+     }
 
-/* Boutons spécifiques */
+     100% {
+         left: 125%;
+     }
+ }
 
-#next-question {
-    background-color: #0366d6;
-}
+ /* Boutons spécifiques */
 
-#next-question:hover {
-    background-color: #034a9a;
-    transform: scale(1.05);
-}
+ #next-question {
+     background-color: #0366d6;
+ }
 
-#new-question {
-    background-color: #f28b30;
-}
+ #next-question:hover {
+     background-color: #034a9a;
+     transform: scale(1.05);
+ }
 
-#new-question:hover {
-    background-color: #d27121;
-    transform: scale(1.05);
-}
+ #new-question {
+     background-color: #f28b30;
+ }
 
-#back-theme {
-    background-color: #48cae4;
-    color: #04293a;
-}
+ #new-question:hover {
+     background-color: #d27121;
+     transform: scale(1.05);
+ }
 
-#back-theme:hover {
-    background-color: #1eaedb;
-    color: white;
-    transform: scale(1.05);
-}
+ #back-theme {
+     background-color: #48cae4;
+     color: #04293a;
+ }
+
+ #back-theme:hover {
+     background-color: #1eaedb;
+     color: white;
+     transform: scale(1.05);
+ }
+
+ .flex-btn {
+     margin-bottom: 2rem;
+     display: flex;
+     justify-content: center;
+     gap: 2rem;
+ }
+
+ @media screen and (max-width: 768px) {
+     #question-list {
+         margin-bottom: 1.5rem;
+     }
+     #question-list p{
+         font-size: 16px;
+     }
+
+     .flex-btn {
+         margin-bottom: 1.5rem;
+         flex-direction: column;
+         gap: 1.5rem;
+     }
+
+     #back-theme {
+         margin-top: 0;
+     }
+ }
